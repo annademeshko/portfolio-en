@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Case by Anna Demeshko: Wave — AI triage of scan results.">
+    <title>Wave: triaging scan results</title>
+    <link rel="icon" type="image/png" href="./assets/fav_black.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="./assets/fav_white.png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="site-controls">
+      <button class="theme-toggle" type="button" aria-label="Theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <main class="page case-page" aria-label="Wave case: triaging scan results">
+      <article class="case-study">
+        <div class="study-stack">
+          <section class="study-block">
+            <p class="eyebrow">Context</p>
+            <p>In enterprise AppSec, every scan left the analyst with hundreds of findings — real vulnerabilities mixed with false positives. Each one had to be opened and checked against its component, paths and context in the code. On large projects, triaging a single scan stretched into hours, and as the volume grew so did the cost of a mistake: miss a real vulnerability, or burn a day on a false one.</p>
+          </section>
+
+          <section class="study-block">
+            <p class="eyebrow">Design challenge</p>
+            <p>The main risk was turning AI into yet another “black box.” The interface had to speed up triage while showing what was checked, why AI decided so and where the conclusion can be confirmed.</p>
+          </section>
+        </div>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/wave/scans.webp" alt="Wave scan table with AI check statuses">
+
+        <div class="study-stack">
+          <section class="study-block">
+            <p class="eyebrow">My role</p>
+            <p>I designed the UX of AI triage: check statuses at the project, scan and finding level, the analysis-mode choice and the AI verdict card. I worked with the ML team, PM and security analysts to translate model signals into a clear working interface.</p>
+          </section>
+
+          <section class="study-block">
+            <p class="eyebrow">Goals</p>
+            <ul>
+              <li>Break the AI check into states for the project, the scan and an individual finding</li>
+              <li>Design the Full scan, Prediction only and Explanation only modes</li>
+              <li>Build the AI verdict card with prediction, explanation and signal conflict</li>
+              <li>Embed the triage action into existing statuses, decision history and code review</li>
+            </ul>
+          </section>
+
+          <section class="study-block">
+            <p class="eyebrow">Solution</p>
+            <p><strong>AI check status at the project and per-scan level:</strong> the scans table immediately shows where the AI check hasn't run, where analysis is in progress, what is completed and where the check was interrupted.</p>
+          </section>
+        </div>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/wave/scans.webp" alt="Wave scan table with AI check statuses at project and scan level">
+
+        <section class="study-note">
+          <p><strong>Choosing the check depth: Full scan, Prediction only, Explanation only:</strong> from a scan row the team picks a full check, prediction only or explanation only. This way the interface supports both fast triage and deep review.</p>
+        </section>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/wave/modes.webp" alt="Wave AI check mode selection: Full scan, Prediction only, Explanation only">
+
+        <section class="study-note">
+          <p><strong>Prediction and explanation: two signals instead of one verdict:</strong> in the CoPilot tab the verdict isn't hidden in a single badge — the analyst sees the probability, the explanation and paths to code. If the signals diverge, the conflict stays visible.</p>
+        </section>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/wave/verdict-1.webp" alt="Wave AI verdict card with probability and explanation">
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/wave/verdict-2.webp" alt="Wave AI verdict card with paths to code">
+
+        <section class="study-block result-block">
+          <p class="eyebrow">Outcome</p>
+          <ul>
+            <li><strong>Triage stopped being a black box:</strong> the analyst sees the probability, the explanation and paths to code — and trusts the verdict because it can be checked, not taken on faith. That's what separates a working AI tool from “one more button.”</li>
+            <li><strong>Speed without blind trust:</strong> three modes (full scan, prediction only, explanation only) let the team pick the depth for the task, while a visible signal conflict stops automatic agreement with the AI where the decision is ambiguous.</li>
+            <li><strong>The decision stayed with the human and became traceable:</strong> every verdict is confirmed, rejected or ignored based on the explanation, paths and the overall decision trail — which means the triage can be defended in an audit.</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <div class="bottom-fade" aria-hidden="true"></div>
+    <nav class="case-nav" aria-label="Case navigation">
+      <a class="case-nav-link case-nav-prev" href="./design-system.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
+      <a class="case-nav-link case-nav-home" href="./index.html">Home</a>
+      <a class="case-nav-link case-nav-next" href="./alwa.html" aria-label="Next case" data-aria-ru="Next case" data-aria-en="Next case"><span class="case-nav-label">Next case</span><img class="case-nav-icon next-icon" src="./assets/icon-external.svg" alt=""></a>
+    </nav>
+    <script src="./script.js"></script>
+  </body>
+</html>

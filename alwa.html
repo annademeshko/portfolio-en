@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Case by Anna Demeshko: Alwa MVP — lab results and health profile.">
+    <title>Alwa MVP: lab results and health profile</title>
+    <link rel="icon" type="image/png" href="./assets/fav_black.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="./assets/fav_white.png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="site-controls">
+      <button class="theme-toggle" type="button" aria-label="Theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <main class="page case-page" aria-label="Alwa MVP case: lab results and health profile">
+      <article class="case-study">
+        <div class="study-stack">
+          <section class="study-block">
+            <p class="eyebrow">Context</p>
+            <p>The MVP had to test a product hypothesis: people are willing to share personal health data if they immediately understand why it's needed and what they get back. The stakes are high — with sensitive data, a single extra question or an unclear step is enough for the user to close the app and not come back.</p>
+          </section>
+
+          <section class="study-block">
+            <p class="eyebrow">Design challenge</p>
+            <p>I had to connect two sensitive scenarios — health data consent and profile collection — with a useful result: a clear review of lab markers. At the same time, the flow had to stay short, calm and look complete enough for an MVP presentation.</p>
+          </section>
+        </div>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/alwa-case/overview.webp" alt="Alwa MVP overview: the product promise and the consent screen">
+
+        <div class="study-stack">
+          <section class="study-block">
+            <p class="eyebrow">My role</p>
+            <p>I designed the MVP flow from the first touch to results review: the value promise, consent, health-profile collection, form states, progress, goal selection and the visual logic of the marker cards. The focus was on making the product feel whole enough for a first hypothesis check without trying to solve everything at once.</p>
+          </section>
+
+          <section class="study-block">
+            <p class="eyebrow">Goals</p>
+            <ul>
+              <li>Build the first MVP scenario: from value proposition to reviewing lab results</li>
+              <li>Show users the value before requesting sensitive health data</li>
+              <li>Break the profile into short steps with clear progress and skip</li>
+              <li>Design the states for consent, input, selected options and biomarker cards</li>
+            </ul>
+          </section>
+
+          <section class="study-block">
+            <p class="eyebrow">Solution</p>
+            <p>The MVP starts with a simple promise: Alwa helps explain every marker, build a personal plan, find a lab and prepare for a doctor's visit. Only after that does the user reach the consent screen.</p>
+          </section>
+        </div>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/alwa-case/profile-intro.webp" alt="Screens for creating a health profile in Alwa">
+
+        <section class="study-note">
+          <p>Name and age are split into short screens with clear progress, the right keyboard type and a disabled/active CTA. After input, the product gives a small personal response instead of just pushing further through the form.</p>
+        </section>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/alwa-case/name-age.webp" alt="Name and age entry screens in Alwa">
+
+        <section class="study-note">
+          <p>The next block explains that the profile is needed for more accurate reference ranges and lifestyle-aware recommendations. The questions are split into separate steps: biological sex, height, weight, activity, smoking, alcohol and menstrual cycle.</p>
+        </section>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/alwa-case/body-profile.webp" alt="Screens collecting body metrics and lifestyle in Alwa">
+
+        <section class="study-note">
+          <p>Chronic conditions, nervous-system symptoms and hormonal symptoms are grouped into chip-based screens with multiple choice. Selected items instantly get a contrast fill and a check-mark, and the final screen closes the profile with a clear “done” state.</p>
+        </section>
+
+        <img class="study-image" loading="lazy" decoding="async" src="./assets/alwa-case/symptoms.webp" alt="Screens for selecting chronic conditions and symptoms in Alwa">
+
+        <section class="study-block result-block">
+          <p class="eyebrow">Outcome</p>
+          <ul>
+            <li><strong>The user sees value before giving data:</strong> the MVP opens with the product's promise, not a form — so consent reads as an exchange, not a barrier.</li>
+            <li><strong>The app asks only for what it needs:</strong> age, body metrics, lifestyle and symptoms are collected in short steps that immediately explain why.</li>
+            <li><strong>The numbers become clear without breaking trust:</strong> marker cards show status and reference range and honestly warn that conclusions rely only on confirmed data.</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <div class="bottom-fade" aria-hidden="true"></div>
+    <nav class="case-nav" aria-label="Case navigation">
+      <a class="case-nav-link case-nav-prev" href="./wave.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
+      <a class="case-nav-link case-nav-home" href="./index.html">Home</a>
+      <span class="case-nav-spacer" aria-hidden="true"></span>
+    </nav>
+    <script src="./script.js"></script>
+  </body>
+</html>
