@@ -155,7 +155,7 @@
       return;
     }
     if (lang === "en") {
-      cvLink.setAttribute("href", "./assets/CV%20Anna%20Demeshko.pdf");
+      cvLink.setAttribute("href", "./assets/Anna_Demeshko%20CV.pdf");
     } else {
       cvLink.setAttribute("href", "./assets/CV%20%E2%80%94%20%D0%94%D0%B5%D0%BC%D0%B5%D1%88%D0%BA%D0%BE%20%D0%90%D0%BD%D0%BD%D0%B0%20%28Product%20designer%29.pdf");
     }
