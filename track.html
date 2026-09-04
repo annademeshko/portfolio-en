@@ -69,6 +69,13 @@
           </section>
 
           <section class="study-block">
+            <p class="eyebrow">Key decisions</p>
+            <p><strong>How to organize the dashboard: by chart types or by role questions.</strong> I chose to build the overview around role questions (severity, repositories, policies), because DevOps, the analyst and the manager each start from a different first question. I rejected an all-purpose gallery of charts: it gave noise to some roles and blind spots to others.</p>
+            <p><strong>Setup: a full configurator or an empty state with a widget picker.</strong> I chose a light picker with previews and Select all — the path from an empty screen to the first overview takes a minute. I rejected a complex configurator: it turns the start into a separate job and scares off some roles before their first overview.</p>
+            <p><strong>Detail: a separate page or an expanded view in place.</strong> I chose to expand a widget into a detailed mode right inside the dashboard, with a one-click return. I rejected moving to a separate details page: the user lost the context of the overview and a sense of where they were.</p>
+          </section>
+
+          <section class="study-block">
             <p class="eyebrow">Solution</p>
             <p><strong>The empty state as a starting point, not a dead end:</strong> the empty screen immediately offers an action — add a widget. A large “+” area shows that a personal overview will appear here.</p>
           </section>
@@ -97,9 +104,9 @@
         <section class="study-block result-block">
           <p class="eyebrow">Outcome</p>
           <ul>
-            <li><strong>1 minute</strong> to assemble a personal security overview for your role.</li>
-            <li><strong>Each role works with its own picture:</strong> DevOps, the analyst and the manager assemble the metrics they need in one place and stop arguing over whose dashboard is the “right” one.</li>
-            <li><strong>The dashboard grows without a rewrite:</strong> a new widget is added without breaking the logic of the rest — the product scales instead of being rebuilt from scratch.</li>
+            <li><strong>≈ 1 minute to assemble a personal overview for your role</strong> — the empty state and widget picker lead from a blank screen to the first overview without a configurator.</li>
+            <li><strong>3 roles — one dashboard:</strong> DevOps, the analyst and the manager assemble the metrics they need in one place and stop arguing over whose dashboard is the “right” one.</li>
+            <li><strong>5 severity levels in one system:</strong> Critical / High / Medium / Low / Informational keep colour consistent across every widget, and a new widget is added without breaking the rest.</li>
           </ul>
         </section>
       </article>
@@ -119,9 +126,9 @@
 
     <div class="bottom-fade" aria-hidden="true"></div>
     <nav class="case-nav" aria-label="Case navigation">
-      <a class="case-nav-link case-nav-prev" href="./vault.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
+      <a class="case-nav-link case-nav-prev" href="./wave.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
       <a class="case-nav-link case-nav-home" href="./index.html">Home</a>
-      <a class="case-nav-link case-nav-next" href="./design-system.html" aria-label="Next case" data-aria-ru="Next case" data-aria-en="Next case"><span class="case-nav-label">Next case</span><img class="case-nav-icon next-icon" src="./assets/icon-external.svg" alt=""></a>
+      <a class="case-nav-link case-nav-next" href="./vault.html" aria-label="Next case" data-aria-ru="Next case" data-aria-en="Next case"><span class="case-nav-label">Next case</span><img class="case-nav-icon next-icon" src="./assets/icon-external.svg" alt=""></a>
     </nav>
     <script src="./script.js"></script>
     <!-- Cloudflare Web Analytics (self-exclusion via ?noanalytics=1) -->

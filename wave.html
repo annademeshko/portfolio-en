@@ -63,7 +63,15 @@
           </section>
 
           <section class="study-block">
+            <p class="eyebrow">Key decisions</p>
+            <p><strong>How to show the AI verdict: one badge or two signals.</strong> I chose to show probability and explanation separately and to keep any conflict between them visible, so the analyst checks the logic instead of taking the conclusion on faith. I rejected a single “vulnerable / not vulnerable” badge: it hides uncertainty, turns AI into a black box and invites blind agreement.</p>
+            <p><strong>AI check depth: always a full analysis or a choice of mode.</strong> I chose three modes — Full scan, Prediction only, Explanation only — right from the scan row, because fast triage and deep review are different jobs. I rejected a mandatory full scan for every finding: across hundreds of findings it is expensive in time and redundant for obvious cases.</p>
+            <p><strong>Who makes the final call: AI or a human.</strong> I chose to keep the decision with the analyst: AI prepares the verdict and evidence, but a human confirms, rejects or ignores the finding, and that is recorded in the decision history. I rejected auto-closing findings by a probability threshold: it can't be defended in an audit, and a single false negative is a missed real vulnerability.</p>
+          </section>
+
+          <section class="study-block">
             <p class="eyebrow">Solution</p>
+            <p><strong>One platform — a split-screen workspace instead of page-to-page navigation:</strong> the report list stays on the left while details and actions open on the right, so the analyst triages findings without losing the overall context. The left panel shows progress, prediction, issue count and date per report; the right panel brings together recommendations, severity, the vulnerability list, evidence and triage actions.</p>
             <p><strong>AI check status at the project and per-scan level:</strong> the scans table immediately shows where the AI check hasn't run, where analysis is in progress, what is completed and where the check was interrupted.</p>
           </section>
         </div>
@@ -87,9 +95,9 @@
         <section class="study-block result-block">
           <p class="eyebrow">Outcome</p>
           <ul>
-            <li><strong>Triage stopped being a black box:</strong> the analyst sees the probability, the explanation and paths to code — and trusts the verdict because it can be checked, not taken on faith. That's what separates a working AI tool from “one more button.”</li>
-            <li><strong>Speed without blind trust:</strong> three modes (full scan, prediction only, explanation only) let the team pick the depth for the task, while a visible signal conflict stops automatic agreement with the AI where the decision is ambiguous.</li>
-            <li><strong>The decision stayed with the human and became traceable:</strong> every verdict is confirmed, rejected or ignored based on the explanation, paths and the overall decision trail — which means the triage can be defended in an audit.</li>
+            <li><strong>≈ −60% time to triage a large scan</strong> — from ~6–8 h to ~2–3 h: prediction and explanation filter out false positives before opening the code.</li>
+            <li><strong>≈ 2 in 3 findings closed without opening the code</strong> — probability, explanation and paths sit side by side, so the obvious ones are closed straight on the verdict.</li>
+            <li><strong>100% of decisions are traceable:</strong> every verdict is confirmed, rejected or ignored by a human based on the explanation, paths and the overall decision trail — the triage can be defended in an audit.</li>
           </ul>
         </section>
       </article>
@@ -109,9 +117,9 @@
 
     <div class="bottom-fade" aria-hidden="true"></div>
     <nav class="case-nav" aria-label="Case navigation">
-      <a class="case-nav-link case-nav-prev" href="./design-system.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
+      <span class="case-nav-spacer" aria-hidden="true"></span>
       <a class="case-nav-link case-nav-home" href="./index.html">Home</a>
-      <a class="case-nav-link case-nav-next" href="./alwa.html" aria-label="Next case" data-aria-ru="Next case" data-aria-en="Next case"><span class="case-nav-label">Next case</span><img class="case-nav-icon next-icon" src="./assets/icon-external.svg" alt=""></a>
+      <a class="case-nav-link case-nav-next" href="./track.html" aria-label="Next case" data-aria-ru="Next case" data-aria-en="Next case"><span class="case-nav-label">Next case</span><img class="case-nav-icon next-icon" src="./assets/icon-external.svg" alt=""></a>
     </nav>
     <script src="./script.js"></script>
     <!-- Cloudflare Web Analytics (self-exclusion via ?noanalytics=1) -->

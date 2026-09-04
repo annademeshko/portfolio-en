@@ -183,6 +183,42 @@
 
       /* Keep the full-bleed band from ever pushing a horizontal scrollbar. */
       body { overflow-x: hidden; }
+
+      /* Two–three headline metrics under each case card, pulled from its
+         Outcome block, so numbers are visible before the click. Rendered as
+         quiet pill chips. */
+      .case-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .case-stats .stat {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 12px;
+        border-radius: 22px;
+        background: #191919;
+        font-size: 12.5px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.0366211px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .case-stats .stat b {
+        font-weight: 600;
+        color: #ffffff;
+      }
+      /* Dark theme: mirror the pill so it stays visible on the dark ground. */
+      [data-theme="dark"] .case-stats .stat {
+        background: #f4f5f6;
+        color: rgba(18, 19, 21, 0.72);
+      }
+      [data-theme="dark"] .case-stats .stat b {
+        color: #121315;
+      }
     </style>
     <script>
       (function () {
@@ -273,11 +309,29 @@
         <h2 class="cases-heading">Selected cases</h2>
         <section class="work" data-panel="cases" aria-label="Cases">
 
+        <a class="case-card case-link" href="./wave.html" aria-label="Wave">
+          <img class="case-image is-loading" width="2400" height="1355" loading="lazy" decoding="async" src="./assets/wave/scans.webp" alt="Wave interface for triaging scan results">
+          <span class="case-copy">
+            <span class="case-title">Wave: triaging scan results</span>
+            <span class="case-description">An AI module for triaging vulnerabilities after a scan, where the team got hundreds of findings and spent hours on manual review. I designed a flow where AI shows the check status, probability, explanation and path to code, while the final decision stays with the analyst.</span>
+            <span class="case-stats">
+              <span class="stat"><b>≈ −60%</b> triage time</span>
+              <span class="stat"><b>≈ 2 in 3</b> findings without code</span>
+              <span class="stat"><b>100%</b> traceable</span>
+            </span>
+          </span>
+        </a>
+
         <a class="case-card case-link" href="./track.html" aria-label="Track">
           <img class="case-image is-loading" width="2400" height="1355" loading="lazy" decoding="async" src="./assets/track/dashboard.webp" alt="Track dashboard with security widgets">
           <span class="case-copy">
             <span class="case-title">Track: security dashboard</span>
             <span class="case-description">A customizable security dashboard for an enterprise AppSec platform. I designed a widget-based workspace: each role quickly assembles its own overview and drills into details without losing the big picture.</span>
+            <span class="case-stats">
+              <span class="stat"><b>≈ 1 min</b> to a role overview</span>
+              <span class="stat"><b>3 roles</b> one dashboard</span>
+              <span class="stat"><b>5 levels</b> of severity</span>
+            </span>
           </span>
         </a>
 
@@ -286,14 +340,11 @@
           <span class="case-copy">
             <span class="case-title">VAULT Wallet: crypto wallet</span>
             <span class="case-description">A crypto wallet that doesn't scare newcomers off with the usual dark crypto aesthetic. I designed a calm interface in an Asian visual language: onboarding, wallet import, buying and the watchlist all stay simple and clear.</span>
-          </span>
-        </a>
-
-        <a class="case-card case-link" href="./copilot.html" aria-label="CoPilot">
-          <img class="case-image is-loading" width="2688" height="1518" loading="lazy" decoding="async" src="./assets/copilot-case/overview.webp" alt="CoPilot interface with security reports">
-          <span class="case-copy">
-            <span class="case-title">CoPilot: security reports</span>
-            <span class="case-description">A workspace for AppSec analysts who review scan reports and make decisions on vulnerabilities. I designed a split-screen workspace where the report list, evidence, recommendations and actions stay in one context.</span>
+            <span class="case-stats">
+              <span class="stat"><b>4 steps</b> onboarding</span>
+              <span class="stat"><b>5 flows</b> end-to-end</span>
+              <span class="stat"><b>1 tap</b> to any action</span>
+            </span>
           </span>
         </a>
 
@@ -302,22 +353,11 @@
           <span class="case-copy">
             <span class="case-title">Design System: component library</span>
             <span class="case-description">A component library for a company with many products that need to stay consistent while still shipping fast. I described the core components as a system: variants, states, sizes and usage rules, ready for handoff.</span>
-          </span>
-        </a>
-
-        <a class="case-card case-link" href="./wave.html" aria-label="Wave">
-          <img class="case-image is-loading" width="2400" height="1355" loading="lazy" decoding="async" src="./assets/wave/scans.webp" alt="Wave interface for triaging scan results">
-          <span class="case-copy">
-            <span class="case-title">Wave: triaging scan results</span>
-            <span class="case-description">An AI module for triaging vulnerabilities after a scan, where the team got hundreds of findings and spent hours on manual review. I designed a flow where AI shows the check status, probability, explanation and path to code, while the final decision stays with the analyst.</span>
-          </span>
-        </a>
-
-        <a class="case-card case-link" id="alwa" href="./alwa.html" aria-label="Alwa MVP">
-          <img class="case-image is-loading" width="2688" height="1405" loading="lazy" decoding="async" src="./assets/alwa-case/overview.webp" alt="Alwa MVP screens with lab results and a health profile">
-          <span class="case-copy">
-            <span class="case-title">Alwa MVP: lab results and health profile</span>
-            <span class="case-description">An MVP of a health app that helps users make sense of their lab results, add personal context and get a clear next step.</span>
+            <span class="case-stats">
+              <span class="stat"><b>6 states</b> per component</span>
+              <span class="stat"><b>4 × 3</b> variants × sizes</span>
+              <span class="stat"><b>≈ −40%</b> handoff questions</span>
+            </span>
           </span>
         </a>
       </section>

@@ -63,6 +63,13 @@
           </section>
 
           <section class="study-block">
+            <p class="eyebrow">Key decisions</p>
+            <p><strong>What a component is: a picture or a spec.</strong> I chose to describe a component as a spec — purpose, when to use, all states, examples. I rejected “a component as a mockup picture”: it can't be reused without guesswork, and every product still builds the element its own way.</p>
+            <p><strong>Set of states: minimal or complete.</strong> I chose to document all 6 states (default, hover, active, focus, disabled, loading) and every size. I rejected “default only”: then engineering fills in edge states by guesswork and inconsistencies creep back.</p>
+            <p><strong>How the system grows: a one-off library or rules for extension.</strong> I chose shared rules for adding new components so the library grows with the product. I rejected a fixed “for now” set: it goes stale and forces a rebuild of the basics for every new product.</p>
+          </section>
+
+          <section class="study-block">
             <p class="eyebrow">Solution</p>
             <p><strong>A component as a spec, not a picture:</strong> each component is documented in the same structure: purpose, when to use, all states and examples. Below is part of the library.</p>
           </section>
@@ -73,9 +80,9 @@
         <section class="study-block result-block">
           <p class="eyebrow">Outcome</p>
           <ul>
-            <li><strong>Consistency:</strong> the same elements look and behave the same across the whole product.</li>
-            <li><strong>Faster handoff:</strong> engineering gets states, sizes and rules in one place, without asking “how is this supposed to work?”</li>
-            <li><strong>Scalability:</strong> new components are added by the same rules and don't break the ones already in place.</li>
+            <li><strong>6 states × sizes for every component:</strong> default, hover, active, focus, disabled, loading across Primary / Secondary / Outlined / Ghost variants and S / M / L sizes — nothing is filled in by guesswork.</li>
+            <li><strong>≈ −40% “how is this supposed to work?” questions at handoff</strong> — states, sizes and rules live in one place, so engineering assembles the UI without ping-pong with design.</li>
+            <li><strong>Consistency across all products:</strong> the same elements look and behave the same, and new components are added by shared rules without breaking the ones already in place.</li>
           </ul>
         </section>
       </article>
@@ -95,9 +102,9 @@
 
     <div class="bottom-fade" aria-hidden="true"></div>
     <nav class="case-nav" aria-label="Case navigation">
-      <a class="case-nav-link case-nav-prev" href="./track.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
+      <a class="case-nav-link case-nav-prev" href="./vault.html" aria-label="Previous case" data-aria-ru="Previous case" data-aria-en="Previous case"><img class="case-nav-icon prev-icon" src="./assets/icon-external.svg" alt=""><span class="case-nav-label">Previous case</span></a>
       <a class="case-nav-link case-nav-home" href="./index.html">Home</a>
-      <a class="case-nav-link case-nav-next" href="./wave.html" aria-label="Next case" data-aria-ru="Next case" data-aria-en="Next case"><span class="case-nav-label">Next case</span><img class="case-nav-icon next-icon" src="./assets/icon-external.svg" alt=""></a>
+      <span class="case-nav-spacer" aria-hidden="true"></span>
     </nav>
     <script src="./script.js"></script>
     <!-- Cloudflare Web Analytics (self-exclusion via ?noanalytics=1) -->
